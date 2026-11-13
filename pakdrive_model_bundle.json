@@ -1,0 +1,223 @@
+{
+  "ml_accuracy": 99.69,
+  "dl_accuracy": 100.0,
+  "scaler_mean": [
+    14.361870726614537,
+    2.807421875
+  ],
+  "scaler_scale": [
+    2.469338383635306,
+    1.2161123676582999
+  ],
+  "fuel_classes": [
+    "Aviation Fuel",
+    "Diesel",
+    "Electric",
+    "Manual",
+    "Petrol"
+  ],
+  "category_classes": [
+    "Bicycle",
+    "Electric Bike",
+    "Electric Car",
+    "Helicopter",
+    "Luxury SUV",
+    "Luxury Supercar",
+    "Petrol Bike",
+    "Petrol Car"
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "name": "Sohrab Classic New Bicycle (2026)",
+      "category": "Bicycle",
+      "fuel": "Manual",
+      "price_pkr": 24000,
+      "range_km": 15,
+      "running_cost_100km": 0,
+      "govt_scheme": "None",
+      "advantages": "Zero fuel cost, great for fitness, no license required.",
+      "disadvantages": "Low speed, tiring for long distances."
+    },
+    {
+      "id": 2,
+      "name": "Trinx M136 Alloy Mountain Bike (2026)",
+      "category": "Bicycle",
+      "fuel": "Manual",
+      "price_pkr": 68000,
+      "range_km": 25,
+      "running_cost_100km": 0,
+      "govt_scheme": "None",
+      "advantages": "Lightweight aluminum frame, 21-speed gears, front suspension.",
+      "disadvantages": "Manual pedaling only."
+    },
+    {
+      "id": 3,
+      "name": "Smart E-Cycle 350W New (2026)",
+      "category": "Electric Bike",
+      "fuel": "Electric",
+      "price_pkr": 118000,
+      "range_km": 45,
+      "running_cost_100km": 80,
+      "govt_scheme": "None",
+      "advantages": "Pedal and electric throttle assist, ultra-low charging cost.",
+      "disadvantages": "Top speed capped at 32 km/h."
+    },
+    {
+      "id": 4,
+      "name": "Honda CD 70 Brand New (2026)",
+      "category": "Petrol Bike",
+      "fuel": "Petrol",
+      "price_pkr": 159900,
+      "range_km": 55,
+      "running_cost_100km": 1800,
+      "govt_scheme": "Punjab Petrol Bike Quota",
+      "advantages": "Zero-meter warranty, highest resale value in Pakistan.",
+      "disadvantages": "High monthly petrol expense."
+    },
+    {
+      "id": 5,
+      "name": "Jolta JE-70L New (Punjab E-Bike)",
+      "category": "Electric Bike",
+      "fuel": "Electric",
+      "price_pkr": 185000,
+      "range_km": 80,
+      "running_cost_100km": 120,
+      "govt_scheme": "Maryam Nawaz Punjab E-Bike Scheme (0% Markup)",
+      "advantages": "Interest-free installments for students, saves Rs. 8,000+ monthly.",
+      "disadvantages": "Takes 5-6 hours to charge, 80 km range limit."
+    },
+    {
+      "id": 6,
+      "name": "Honda CG 125 Brand New (2026)",
+      "category": "Petrol Bike",
+      "fuel": "Petrol",
+      "price_pkr": 238900,
+      "range_km": 40,
+      "running_cost_100km": 2500,
+      "govt_scheme": "None",
+      "advantages": "Strong 125cc acceleration, high market demand.",
+      "disadvantages": "Higher fuel consumption and engine vibrations."
+    },
+    {
+      "id": 7,
+      "name": "Yamaha YBR 125G Brand New (2026)",
+      "category": "Petrol Bike",
+      "fuel": "Petrol",
+      "price_pkr": 485000,
+      "range_km": 42,
+      "running_cost_100km": 2600,
+      "govt_scheme": "None",
+      "advantages": "Sporty styling, front disc brake, comfortable suspension.",
+      "disadvantages": "Expensive genuine spare parts."
+    },
+    {
+      "id": 8,
+      "name": "Suzuki Alto VXR Brand New (2026)",
+      "category": "Petrol Car",
+      "fuel": "Petrol",
+      "price_pkr": 2707000,
+      "range_km": 20,
+      "running_cost_100km": 4500,
+      "govt_scheme": "None",
+      "advantages": "Cheapest brand-new car in Pakistan, 20+ km/l fuel average.",
+      "disadvantages": "Lightweight body build, basic interior."
+    },
+    {
+      "id": 9,
+      "name": "Honri Ve 2.0 New Electric Car (2026)",
+      "category": "Electric Car",
+      "fuel": "Electric",
+      "price_pkr": 3999000,
+      "range_km": 200,
+      "running_cost_100km": 900,
+      "govt_scheme": "None",
+      "advantages": "Most affordable brand-new EV car in Pakistan, zero petrol cost.",
+      "disadvantages": "Compact cabin size for city driving."
+    },
+    {
+      "id": 10,
+      "name": "Suzuki Cultus VXL Brand New (2026)",
+      "category": "Petrol Car",
+      "fuel": "Petrol",
+      "price_pkr": 4084000,
+      "range_km": 18,
+      "running_cost_100km": 5000,
+      "govt_scheme": "None",
+      "advantages": "1000cc K-Series engine, dual airbags, ABS brakes.",
+      "disadvantages": "Higher price for a compact hatchback."
+    },
+    {
+      "id": 11,
+      "name": "Toyota Yaris GLI 1.3 Brand New (2026)",
+      "category": "Petrol Car",
+      "fuel": "Petrol",
+      "price_pkr": 4649000,
+      "range_km": 15,
+      "running_cost_100km": 6200,
+      "govt_scheme": "None",
+      "advantages": "Toyota reliability, comfortable suspension, strong resale.",
+      "disadvantages": "Basic infotainment in base variant."
+    },
+    {
+      "id": 12,
+      "name": "Toyota Corolla Altis 1.6 New (2026)",
+      "category": "Petrol Car",
+      "fuel": "Petrol",
+      "price_pkr": 6549000,
+      "range_km": 13,
+      "running_cost_100km": 8500,
+      "govt_scheme": "None",
+      "advantages": "Executive sedan, heavy-duty suspension for Pakistani roads.",
+      "disadvantages": "Higher fuel cost in dense traffic."
+    },
+    {
+      "id": 13,
+      "name": "BYD Atto 3 New Electric SUV (2026)",
+      "category": "Electric Car",
+      "fuel": "Electric",
+      "price_pkr": 8990000,
+      "range_km": 410,
+      "running_cost_100km": 1400,
+      "govt_scheme": "None",
+      "advantages": "410 km range, Blade Battery safety, fast DC charging.",
+      "disadvantages": "Fast chargers on motorways are still expanding."
+    },
+    {
+      "id": 14,
+      "name": "Toyota Fortuner Legender New (2026)",
+      "category": "Luxury SUV",
+      "fuel": "Diesel",
+      "price_pkr": 18999000,
+      "range_km": 10,
+      "running_cost_100km": 14000,
+      "govt_scheme": "None",
+      "advantages": "2.8L 4x4 turbo diesel SUV, VIP road presence.",
+      "disadvantages": "High diesel running cost and annual token tax."
+    },
+    {
+      "id": 15,
+      "name": "Porsche Taycan Turbo New EV (2026)",
+      "category": "Luxury Supercar",
+      "fuel": "Electric",
+      "price_pkr": 68000000,
+      "range_km": 450,
+      "running_cost_100km": 2200,
+      "govt_scheme": "None",
+      "advantages": "0-100 km/h in 2.8s, futuristic 3D cockpit, zero emissions.",
+      "disadvantages": "High import duties and specialized service needs."
+    },
+    {
+      "id": 16,
+      "name": "Robinson R44 New Helicopter (2026)",
+      "category": "Helicopter",
+      "fuel": "Aviation Fuel",
+      "price_pkr": 155000000,
+      "range_km": 550,
+      "running_cost_100km": 110000,
+      "govt_scheme": "None",
+      "advantages": "Factory-new 4-seater helicopter, fastest VIP air travel.",
+      "disadvantages": "Requires CAA pilot license, helipad, and aviation fuel."
+    }
+  ]
+}
