@@ -3,165 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PakDrive AI | Smart 3D Vehicle & Scheme Showroom (2026)</title>
-  <script src="https://tailwindcss.com"></script>
+  <title>PakDrive AI | Luxury 3D Vehicle & Scheme Showroom (2026)</title>
   <link href="https://googleapis.com" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f4f7f9;
       color: #0f172a;
+      line-height: 1.5;
+      padding-bottom: 90px;
     }
-    .hero-navy {
-      background: linear-gradient(135deg, #0b2545 0%, #13315c 60%, #0f172a 100%);
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1220px; margin: 0 auto; padding: 0 20px; }
+
+    /* NAVBAR */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
     }
-    .card-hover {
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      max-width: 1220px;
+      margin: 0 auto;
     }
-    .card-hover:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
-      border-color: #16a34a;
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand-icon {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: linear-gradient(135deg, #0b2545, #059669);
+      color: #fff; font-weight: 800; font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
     }
-    @keyframes spin3dArchitecture {
-      0% { transform: perspective(1000px) rotateY(-18deg) rotateX(4deg) scale(1); }
-      50% { transform: perspective(1000px) rotateY(18deg) rotateX(-2deg) scale(1.06); }
-      100% { transform: perspective(1000px) rotateY(-18deg) rotateX(4deg) scale(1); }
+    .brand-title { font-size: 22px; font-weight: 800; color: #0f172a; }
+    .brand-title span { color: #059669; }
+    .nav-links { display: flex; gap: 24px; font-size: 14px; font-weight: 600; color: #475569; }
+    .nav-links a:hover { color: #059669; }
+    .btn-dark {
+      background: #0f172a; color: #fff; border: none; padding: 10px 18px;
+      border-radius: 99px; font-size: 12px; font-weight: 700; cursor: pointer;
     }
-    .arch-3d-model {
-      animation: spin3dArchitecture 7s infinite ease-in-out;
-      filter: drop-shadow(0 25px 25px rgba(16, 185, 129, 0.35));
+    .btn-dark:hover { background: #1e293b; }
+
+    /* HERO SECTION */
+    .hero {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 48px 0 75px 0;
     }
-    .blueprint-grid {
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .pill-badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 99px;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 { font-size: 42px; font-weight: 800; color: #0f172a; line-height: 1.15; margin-bottom: 14px; }
+    .hero p { font-size: 15px; color: #475569; margin-bottom: 18px; }
+    .brand-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .brand-tag {
+      background: #f1f5f9; color: #334155; font-size: 12px; font-weight: 700;
+      padding: 5px 12px; border-radius: 99px; border: 1px solid #e2e8f0;
+    }
+    .hero-showcase-card {
+      background: linear-gradient(135deg, #0b2545 0%, #1e293b 100%);
+      border-radius: 24px;
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 20px 40px rgba(11, 37, 69, 0.2);
+    }
+
+    /* PAKWHEELS NAVY SEARCH BAR */
+    .search-wrapper { margin-top: -45px; position: relative; z-index: 20; }
+    .search-box {
+      background: linear-gradient(135deg, #0b2545 0%, #13315c 100%);
+      border-radius: 20px;
+      padding: 26px 30px;
+      box-shadow: 0 20px 45px rgba(11, 37, 69, 0.28);
+      color: #fff;
+    }
+    .search-box h2 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+    .search-box .sub { font-size: 12px; color: #cbd5e1; margin-bottom: 16px; }
+    .search-bar {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+    .field-group { padding: 4px 12px; border-right: 1px solid #e2e8f0; }
+    .field-group:last-of-type { border-right: none; }
+    .field-group label { display: block; font-size: 10px; font-weight: 800; color: #64748b; text-transform: uppercase; margin-bottom: 2px; }
+    .field-group input, .field-group select {
+      width: 100%; border: none; outline: none; font-size: 15px; font-weight: 800; color: #0f172a; background: transparent;
+    }
+    .btn-search {
+      background: #16a34a; color: #fff; border: none; border-radius: 10px;
+      padding: 16px 20px; font-size: 15px; font-weight: 800; cursor: pointer; width: 100%;
+      box-shadow: 0 6px 16px rgba(22, 163, 74, 0.35);
+    }
+    .btn-search:hover { background: #15803d; }
+
+    /* LOADER */
+    .loader-box {
+      display: none;
+      background: #0f172a;
+      color: #fff;
+      border-radius: 20px;
+      padding: 35px;
+      text-align: center;
+      margin-top: 28px;
+      border: 1px solid #10b981;
+    }
+    .spinner {
+      width: 40px; height: 40px; border: 4px solid #10b981; border-top-color: transparent;
+      border-radius: 50%; margin: 0 auto 14px auto; animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .progress-track { width: 100%; max-width: 420px; height: 8px; background: #1e293b; border-radius: 99px; margin: 14px auto 0 auto; overflow: hidden; }
+    .progress-fill { height: 100%; background: #10b981; width: 10%; transition: width 0.5s ease; }
+
+    /* METRIC CARDS */
+    .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+    .metric-card {
+      background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 18px 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .metric-label { font-size: 11px; font-weight: 800; color: #64748b; text-transform: uppercase; }
+    .metric-val { font-size: 20px; font-weight: 800; color: #0f172a; margin: 4px 0; }
+    .metric-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 99px; background: #ecfdf5; color: #059669; }
+
+    /* VEHICLE CARDS GRID */
+    .section-title { font-size: 24px; font-weight: 800; color: #0f172a; margin: 36px 0 6px 0; }
+    .section-sub { font-size: 13px; color: #64748b; margin-bottom: 20px; }
+    .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .v-card {
+      background: #ffffff; border: 2px solid #e2e8f0; border-radius: 18px; padding: 18px;
+      cursor: pointer; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .v-card:hover, .v-card.active {
+      transform: translateY(-6px); border-color: #16a34a; box-shadow: 0 18px 35px rgba(15, 23, 42, 0.1);
+    }
+    .v-badge-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .v-cat { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: #f1f5f9; color: #334155; }
+    .v-cat.scheme { background: #dcfce7; color: #166534; }
+    .v-stage {
+      background: radial-gradient(circle, #ffffff 30%, #f1f5f9 100%);
+      border-radius: 14px; height: 145px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px; border: 1px solid #f1f5f9; padding: 10px;
+    }
+    .v-name { font-size: 16px; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
+    .v-meta { font-size: 12px; color: #64748b; }
+    .v-price { font-size: 20px; font-weight: 800; color: #059669; margin: 10px 0; }
+    .v-footer {
+      border-top: 1px solid #f1f5f9; padding-top: 10px; display: flex; justify-content: space-between; align-items: center;
+      font-size: 12px; font-weight: 700;
+    }
+    .v-link { color: #2563eb; }
+
+    /* 3D ARCHITECTURE & SPECS TABLE */
+    .arch-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 24px; margin-top: 16px; }
+    .blueprint-card {
       background-color: #090d16;
-      background-image: 
-        linear-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(16, 185, 129, 0.12) 1px, transparent 1px);
+      background-image: linear-gradient(rgba(16,185,129,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.12) 1px, transparent 1px);
       background-size: 24px 24px;
+      border-radius: 22px; padding: 26px; color: #fff; border: 1px solid #1e293b;
+      display: flex; flex-direction: column; justify-content: space-between;
     }
-  </style>
-</head>
-<body class="min-h-screen pb-24">
+    .arch-stage {
+      background: rgba(255,255,255,0.96); border-radius: 18px; padding: 24px; margin: 20px 0;
+      display: flex; align-items: center; justify-content: center; height: 220px;
+    }
+    @keyframes float3d {
+      0% { transform: perspective(900px) rotateY(-16deg) scale(1); }
+      50% { transform: perspective(900px) rotateY(16deg) scale(1.06); }
+      100% { transform: perspective(900px) rotateY(-16deg) scale(1); }
+    }
+    .spin-3d { animation: float3d 6s infinite ease-in-out; }
+    .arch-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center;
+      background: rgba(15, 23, 42, 0.9); padding: 14px; border-radius: 14px; border: 1px solid #1e293b;
+    }
+    .spec-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 24px; }
+    .spec-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 13px; }
+    .spec-table th, .spec-table td { border: 1px solid #e2e8f0; padding: 10px 14px; text-align: left; }
+    .spec-table th { background: #f8fafc; font-weight: 800; color: #334155; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+    .pro-box { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 14px; padding: 14px; font-size: 12px; color: #065f46; }
+    .con-box { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 14px; padding: 14px; font-size: 12px; color: #9f1239; }
 
-  <!-- TOP WHITE LUXURY NAVBAR (Inspired by Porsche Unique Video) -->
-  <nav class="bg-white border-b border-slate-200 sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
-      <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center font-extrabold text-lg">P</div>
-        <div>
-          <span class="text-xl font-extrabold tracking-tight text-slate-900">PakDrive <span class="text-emerald-600">AI</span></span>
-          <span class="hidden sm:inline-block text-xs text-slate-500 ml-2 font-medium">2026 Brand New Mobility & Aviation</span>
-        </div>
-      </div>
-      <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
-        <a href="#search-section" class="hover:text-slate-900">Find Vehicles</a>
-        <a href="#fleet-section" class="hover:text-slate-900">2026 Fleet</a>
-        <a href="#architecture-section" class="hover:text-slate-900">3D Architecture</a>
-        <a href="#compare-section" class="hover:text-slate-900">EV vs Petrol</a>
-      </div>
-      <button onclick="toggleApiModal()" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-4 py-2.5 rounded-full transition">
-        🔑 Live API Settings
-      </button>
-    </div>
-  </nav>
-
-  <!-- API KEYS MODAL -->
-  <div id="apiModal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl border border-slate-200">
-      <h3 class="text-lg font-extrabold text-slate-900 mb-1">🔑 Connect Live AI & Market APIs</h3>
-      <p class="text-xs text-slate-500 mb-4">Enter your free API keys for live Gemini AI car consultation and real-time market search:</p>
-      <label class="block text-xs font-bold text-slate-700 mb-1">Google Gemini API Key (://google.com)</label>
-      <input id="geminiKey" type="password" placeholder="AIzaSy..." class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm mb-3 outline-none focus:border-emerald-600">
-      <label class="block text-xs font-bold text-slate-700 mb-1">Serper.dev Search API Key (serper.dev)</label>
-      <input id="serperKey" type="password" placeholder="Enter Serper API Key..." class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm mb-4 outline-none focus:border-emerald-600">
-      <div class="flex justify-end gap-2">
-        <button onclick="toggleApiModal()" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold">Save & Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- LUXURY SPLIT HERO BANNER (Inspired by Porsche Video + PakWheels Navy Search) -->
-  <section class="bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 py-10 md:py-14 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      <div class="lg:col-span-6 space-y-4">
-        <span class="inline-block bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold px-3.5 py-1.5 rounded-full">
-          HYBRID ML (XGBOOST) + DEEP LEARNING SYSTEM
-        </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
-          Find Brand New Rides in Pakistan
-        </h1>
-        <p class="text-slate-600 text-base leading-relaxed">
-          Enter your budget in PKR. Within 4–5 seconds, our AI model recommends brand-new <b>Bicycles, Electric Bikes (Punjab Govt Scheme), Petrol Bikes, Cars, SUVs, and Helicopters</b> with 3D architecture specs and advantages.
-        </p>
-        <!-- Brand Strip (Inspired by Popular Brands Screenshot) -->
-        <div class="pt-2 flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-          <span class="px-3 py-1 bg-slate-100 rounded-full">Toyota</span>
-          <span class="px-3 py-1 bg-slate-100 rounded-full">Honda</span>
-          <span class="px-3 py-1 bg-slate-100 rounded-full">Suzuki</span>
-          <span class="px-3 py-1 bg-slate-100 rounded-full">BYD</span>
-          <span class="px-3 py-1 bg-slate-100 rounded-full">Jolta EV</span>
-          <span class="px-3 py-1 bg-slate-100 rounded-full">Road Prince</span>
-          <span class="px-3 py-1 bg-slate-100 rounded-full">Porsche</span>
-          <span class="px-3 py-1 bg-slate-100 rounded-full">Bell Aviation</span>
-        </div>
-      </div>
-      <div class="lg:col-span-6 flex justify-center">
-        <img src="https://wikimedia.org" alt="Luxury Vehicle" class="rounded-3xl shadow-xl max-h-72 object-cover w-full border border-slate-200">
-      </div>
-    </div>
-  </section>
-
-  <!-- PAKWHEELS STYLE FLOATING SEARCH BAR -->
-  <section id="search-section" class="max-w-7xl mx-auto px-4 -mt-7 relative z-10">
-    <div class="hero-navy rounded-2xl p-6 md:p-8 shadow-2xl text-white">
-      <div class="mb-4">
-        <h2 class="text-xl font-bold">Find New Vehicles by Your Budget</h2>
-        <p class="text-xs text-slate-300">All 2026 zero-meter models from Bicycles to Executive Helicopters</p>
-      </div>
-      <div class="bg-white rounded-xl p-3 grid grid-cols-1 md:grid-cols-12 gap-3 items-center text-slate-900">
-        <div class="md:col-span-4">
-          <label class="block text-[11px] font-bold text-slate-500 uppercase px-2">Your Budget (PKR)</label>
-          <input id="budgetInput" type="number" value="185000" min="20000" max="1500000000" step="10000" placeholder="Enter budget e.g. 100000" class="w-full px-2 py-1.5 text-base font-extrabold text-slate-900 outline-none">
-        </div>
-        <div class="md:col-span-3 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0 md:pl-3">
-          <label class="block text-[11px] font-bold text-slate-500 uppercase">Fuel / Power Type</label>
-          <select id="fuelInput" class="w-full py-1.5 text-sm font-bold text-slate-800 outline-none bg-transparent">
-            <option value="Any">All Types (Auto AI)</option>
-            <option value="Electric">Electric (EV)</option>
-            <option value="Petrol">Petrol</option>
-            <option value="Manual">Manual (Bicycle)</option>
-            <option value="Diesel">Diesel (4x4 SUV)</option>
-            <option value="Aviation Fuel">Aviation (Helicopter)</option>
-          </select>
-        </div>
-        <div class="md:col-span-3 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0 md:pl-3">
-          <label class="block text-[11px] font-bold text-slate-500 uppercase">Brand / Make</label>
-          <select id="brandInput" class="w-full py-1.5 text-sm font-bold text-slate-800 outline-none bg-transparent">
-            <option value="Any">All Brands</option>
-            <option value="Honda">Honda</option>
-            <option value="Jolta">Jolta EV</option>
-            <option value="Road Prince">Road Prince</option>
-            <option value="Suzuki">Suzuki</option>
-            <option value="Toyota">Toyota</option>
-            <option value="BYD">BYD</option>
-            <option value="Honri">Honri</option>
-            <option value="Porsche">Porsche</option>
-            <option value="Bell">Bell / Robinson</option>
-            <option value="Sohrab">Sohrab / Trinx</option>
-          </select>
-        </div>
-        <div class="md:col-span-2">
-          <button onclick="runAiSearch()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3.5 px-4 rounded-lg text-sm shadow-lg transition">
-            Search
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4-TO-5 SECOND AI MODEL PROCESSING LOADER -->
-  <div id="aiLoader" class="hidden max-w-7xl mx-auto px-4 mt-8">
-    <div class="bg-slate-900 text-white rounded-2xl p-8 text-center border border-emerald-500/40 shadow-xl">
-      <div class="inline-block w-10 h-10 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin mb-3"></div>
-      <h3 id="loaderStepText" class="text-lg font-extrabold text-emerald-400">Initializing Hybrid ML & Deep Learning Inference...</h3>
-      <p class="text-xs text-slate-400 mt-1">Scanning 2026 Market Catalog, Punjab E-Bike Quota & 3D Architecture Specs (4.5s)</p>
+    /* COMPARISON SECTION */
+    .comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .comp-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 18px; padding: 24px; }
+    .comp-card ul { list-style: none; margin-top: 12px; font-size: 13px; color: #334155; }
